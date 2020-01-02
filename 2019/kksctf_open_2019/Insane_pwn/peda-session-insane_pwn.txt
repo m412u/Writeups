@@ -1,0 +1,3 @@
+break fgets
+break *0x56555863
+
