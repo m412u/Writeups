@@ -1,6 +1,6 @@
 core
 .gdb_history
-peda-session-baby_bof.txt
+peda-session-*.txt
 *.id0
 *.id1
 *.id2
