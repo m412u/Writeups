@@ -1,6 +1,8 @@
 # SNOWVERFLOW
 
-`#x86_64` `#bof` `#stripped`
+file: `#x86_64` `#stripped`
+vuln: `#bof`
+soln: `#ret2libc`
 
 * File
 ```sh
