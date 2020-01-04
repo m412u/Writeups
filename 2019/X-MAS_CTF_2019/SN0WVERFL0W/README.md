@@ -1,5 +1,7 @@
 # SNOWVERFLOW
 
+\#x86_64 \#bof \#stripped
+
 * File
 ```sh
 $ file chall 
