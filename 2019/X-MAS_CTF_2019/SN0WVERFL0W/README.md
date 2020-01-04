@@ -1,6 +1,6 @@
 # SNOWVERFLOW
 
-\#x86_64 \#bof \#stripped
+`#x86_64` `#bof` `#stripped`
 
 * File
 ```sh
