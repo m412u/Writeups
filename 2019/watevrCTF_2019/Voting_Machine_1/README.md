@@ -1,8 +1,8 @@
 # Voting Machine 1
 
-file: `#x86_64` `#stripped`  
+file: `#x86_64`  
 vuln: `#bof`  
-soln: `#ret2libc`  
+soln: `#retoverwrite`  
   
 * File
 ```sh
