@@ -1,15 +1,15 @@
 # SNOWVERFLOW
 
-file: `#x86_64` `#stripped`
-vuln: `#bof`
-soln: `#ret2libc`
-
+file: `#x86_64` `#stripped` 
+vuln: `#bof` 
+soln: `#ret2libc` 
+ 
 * File
 ```sh
 $ file chall 
 chall: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, for GNU/Linux 3.2.0, BuildID[sha1]=b96d5da6df4dc39b35bec7a8068b741d24999c3d, stripped
 ```
-
+ 
 * checksec.sh
 ```sh
 $ checksec.sh --file chall 
@@ -17,7 +17,7 @@ RELRO           STACK CANARY      NX            PIE             RPATH      RUNPA
 Partial RELRO   No canary found   NX enabled    Not an ELF file   No RPATH   No RUNPATH   chall
 
 ```
-
+ 
 * exploit
 ```python
 from pwn import *
